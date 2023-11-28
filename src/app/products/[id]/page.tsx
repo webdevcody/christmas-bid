@@ -1,4 +1,6 @@
+import { ItemView } from "@/components/item-view";
 import { getProduct } from "@/data-layer/products";
+import { redirect } from "next/navigation";
 
 export default async function Product({
   params,
@@ -9,5 +11,13 @@ export default async function Product({
 }) {
   const product = await getProduct(params.id);
 
-  return <div>{product?.name}</div>;
+  if (!product) {
+    redirect("/");
+  }
+
+  return (
+    <section className="min-h-screen trees text-gray-600">
+      <ItemView item={product} />
+    </section>
+  );
 }
