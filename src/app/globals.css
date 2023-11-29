@@ -42,3 +42,10 @@ body {
   position: absolute;
   z-index: 10;
 }
+
+.ribbon {
+  background-image: url("/ribbon.png");
+  background-size: 20px 66px;
+  background-position-y: -6px;
+  background-repeat: repeat-x;
+}

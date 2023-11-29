@@ -18,8 +18,10 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.293.0",
     "next": "14.0.3",
+    "next-cloudinary": "^5.7.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-share": "^5.0.2",
     "react-snowfall": "^1.2.1",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7"

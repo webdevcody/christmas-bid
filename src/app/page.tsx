@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { SnowfallWrapper } from "./snowfall-wrapper";
 import Image from "next/image";
 import { ProductCardList } from "./product-card-list";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
             src="/hero.png"
             width="1280"
           />
-          <div className="container px-4 md:px-6 relative mx-auto">
+          <div className="container px-4 md:px-6 relative mx-auto flex flex-col gap-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
               Christmas Bidding
               <br /> Made Easy
@@ -23,9 +24,9 @@ export default function Home() {
             <p className="mx-auto max-w-[700px] text-xl md:text-2xl lg:text-3xl">
               Start bidding on great Christmas products!
             </p>
-            <Button className="mt-4 bg-white text-green-500">
-              Start Bidding
-            </Button>
+            <Link href="/products">
+              <Button variant={"ghost"}>Start Bidding</Button>
+            </Link>
           </div>
         </section>
 
@@ -33,7 +34,7 @@ export default function Home() {
           <div className="wave" />
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-5xl text-gray-600 mb-12 font-bold text-center">
-              Recent Offers
+              Recent Auctions
             </h2>
             <ProductCardList />
           </div>
