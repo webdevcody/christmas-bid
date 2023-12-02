@@ -6,11 +6,9 @@ import {
   SelectContent,
   Select,
 } from "@/components/ui/select";
-import { CardHeader, CardContent, Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
 import { AuctionCard } from "./auction-card";
+
+export const dynamic = "force-dynamic";
 
 export default async function Product() {
   const products = await getProducts();
