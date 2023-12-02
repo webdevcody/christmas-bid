@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { CldImage } from "next-cloudinary";
+import { HTMLAttributes } from "react";
 
 export function AuctionCard({ product }: { product: Product }) {
   return (
@@ -42,7 +43,7 @@ export function AuctionCard({ product }: { product: Product }) {
   );
 }
 
-function IconStar(props) {
+function IconStar(props: HTMLAttributes<SVGElement>) {
   return (
     <svg
       {...props}
@@ -61,7 +62,7 @@ function IconStar(props) {
   );
 }
 
-function IconHeart(props) {
+function IconHeart(props: HTMLAttributes<SVGElement>) {
   return (
     <svg
       {...props}

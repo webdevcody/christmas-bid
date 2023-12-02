@@ -7,6 +7,7 @@ import { ProductImage } from "./product-image";
 import { Metadata } from "next";
 import { getCldOgImageUrl } from "next-cloudinary";
 import { ShareOnTwitter } from "./share";
+import { HTMLAttributes } from "react";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const product = await getProduct(params.id);
@@ -275,7 +276,7 @@ export default async function Product({
   );
 }
 
-function IconStar(props) {
+function IconStar(props: HTMLAttributes<SVGElement>) {
   return (
     <svg
       {...props}
@@ -294,7 +295,7 @@ function IconStar(props) {
   );
 }
 
-function IconClock(props) {
+function IconClock(props: HTMLAttributes<SVGElement>) {
   return (
     <svg
       {...props}

@@ -1,14 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
+import { HTMLAttributes, useEffect, useState } from "react";
 import { TwitterShareButton } from "react-share";
 
 export function ShareOnTwitter() {
-  const [location, setLocation] = useState<Location>();
+  const [location, setLocation] = useState<string>();
 
   useEffect(() => {
-    setLocation(window.location);
+    setLocation(window.location.href);
   }, []);
 
   return (
@@ -21,7 +21,7 @@ export function ShareOnTwitter() {
   );
 }
 
-function IconTwitter(props) {
+function IconTwitter(props: HTMLAttributes<SVGElement>) {
   return (
     <svg
       {...props}

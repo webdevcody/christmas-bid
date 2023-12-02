@@ -76,11 +76,11 @@ export default async function Product() {
               <h3 className="font-semibold mb-2">Clothing</h3>
               <div className="mb-4">
                 <input className="mr-2" id="men-clothing" type="checkbox" />
-                <label htmlFor="men-clothing">Men's Clothing</label>
+                <label htmlFor="men-clothing">Men{"'"}s Clothing</label>
               </div>
               <div className="mb-4">
                 <input className="mr-2" id="women-clothing" type="checkbox" />
-                <label htmlFor="women-clothing">Women's Clothing</label>
+                <label htmlFor="women-clothing">Women{"'"}s Clothing</label>
               </div>
             </div>
           </aside>
